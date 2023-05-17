@@ -30,7 +30,7 @@ class EchoipClient
             ->setAsn($result['asn'] ?? null)
             ->setAsnOrg($result['asn_org'] ?? null)
             ->setHostname($result['hostname'] ?? null)
-            ->setUserAgent((array)$result['user_agent']);
+            ->setUserAgent($result['user_agent'] ?? null);
     }
 
     /**
