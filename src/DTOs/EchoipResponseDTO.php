@@ -5,7 +5,7 @@ namespace Sicaboy\EchoipLaravel\DTOs;
 class EchoipResponseDTO
 {
     private string $ip;
-    private ?int $ip_decimal;
+    private $ip_decimal;
     private ?string $country;
     private ?string $country_iso;
     private ?bool $country_eu;
@@ -40,18 +40,18 @@ class EchoipResponseDTO
     }
 
     /**
-     * @return int|null
+     * @return int|float|null
      */
-    public function getIpDecimal(): ?int
+    public function getIpDecimal()
     {
         return $this->ip_decimal;
     }
 
     /**
-     * @param int|null $ip_decimal
+     * @param int|float|null $ip_decimal
      * @return $this
      */
-    public function setIpDecimal(?int $ip_decimal): self
+    public function setIpDecimal($ip_decimal): self
     {
         $this->ip_decimal = $ip_decimal;
         return $this;
